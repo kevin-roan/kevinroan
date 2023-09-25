@@ -9,7 +9,6 @@ const Home = () => {
         <BookingCard />
         <BookingCard />
         <BookingCard />
-        <BookingCard />
       </div>
     </>
   );
