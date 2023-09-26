@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Projects from "../Pages/Projects";
 import NotFound from "../Pages/NotFound";
+import { SimpleFooter } from "../components/Footer";
 
 const LayoutRoutes = () => {
   const routes = [
