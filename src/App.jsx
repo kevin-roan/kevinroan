@@ -3,7 +3,11 @@ import "./App.css";
 import LayoutRoutes from "./RouteLayouts/LayoutRoutes";
 
 function App() {
-  return <LayoutRoutes />;
+  return (
+    <div style={{ background: "#282C34", height: "100vh" }}>
+      <LayoutRoutes />
+    </div>
+  );
 }
 
 export default App;
