@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { NavbarDefault } from "../components/NavBar";
+import { ComplexNavbar } from "../components/NavBar";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Projects from "../Pages/Projects";
@@ -28,7 +28,7 @@ const LayoutRoutes = () => {
   ];
   return (
     <Router basename="/">
-      <NavbarDefault />
+      <ComplexNavbar />
       <Routes>
         {routes.map((route) => (
           <Route

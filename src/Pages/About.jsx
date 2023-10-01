@@ -40,9 +40,9 @@ const ExampleComponent = () => {
 const CenterDiv = () => {
   return (
     <div className="grid place-content-center mt-9 ">
-      <Typography variant="h1" color="white">
+      <h1 style={{ color: "#fff", fontSize: "5rem", fontFamily: "sans-serif" }}>
         Welcome to my
-      </Typography>
+      </h1>
       <ExampleComponent />
     </div>
   );

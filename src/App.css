@@ -1,3 +1,8 @@
+* {
+  font-family: "system-ui";
+  font-weight: 500;
+}
+
 :root {
   /* --primary-color: #6f55f2; */
   --primary-color: #14b0a9;
