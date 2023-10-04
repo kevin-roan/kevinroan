@@ -1,5 +1,13 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
+}
+.heading {
+  color: #282c34;
+  font-size: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: QuickSand;
+  margin-bottom: 10px;
 }

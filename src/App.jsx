@@ -4,7 +4,7 @@ import LayoutRoutes from "./RouteLayouts/LayoutRoutes";
 
 function App() {
   return (
-    <div style={{ background: "#282C34", height: "100vh", padding: "20px" }}>
+    <div style={{ background: "#282C34" }}>
       <LayoutRoutes />
     </div>
   );
