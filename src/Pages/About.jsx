@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <div className="grid place-content-center mt-9 greeting-container">
-        <h1>Welcome to my</h1>
+        <h1 style={{ fontFamily: "QuickSand" }}>Welcome to my</h1>
         <TextTyper />
       </div>
     </>
@@ -33,6 +33,7 @@ const TextTyper = () => {
         cursor={true}
         repeat={Infinity}
         className="text-typer"
+        style={{ fontFamily: "QuickSand" }}
       />
     </>
   );
