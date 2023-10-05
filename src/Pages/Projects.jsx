@@ -11,21 +11,28 @@ const HeaderStyled = styled.h1`
   font-family: QuickSand;
   margin-bottom: 10px;
 `;
-const ContainerStyled = styled.div`
+
+const CardStyled = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10vh;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const Home = () => {
   return (
-    <>
+    <div style={{ height: "100vh" }}>
       <HeaderStyled>Projects</HeaderStyled>
-      <div className="container">
+      <CardStyled>
         <BookingCard />
         <BookingCard />
         <BookingCard />
-      </div>
-    </>
+      </CardStyled>
+    </div>
   );
 };
 
