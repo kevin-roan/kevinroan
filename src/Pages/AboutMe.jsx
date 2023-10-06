@@ -6,13 +6,39 @@ const CardContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid black;
+  border: 2px solid black;
   background-color: #23262d;
-  /* border-radius: 13px; */
-  margin-top: 24vh;
+  border-radius: 9px;
+  margin-top: 25vh;
   height: 422px;
   width: 900px;
+  padding: 20px;
+  max-width: 100%;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.8);
+  position: relative;
+  animation: breathAnimation 3s ease-in-out infinite;
+  @media screen and (max-width: 480px) and (max-width: 1024px) {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 13vh;
+    height: 100%;
+    width: 100%;
+  }
+
+  @keyframes breathAnimation {
+    0% {
+      transform: scale(1);
+      background-color: #23262d;
+    }
+    50% {
+      transform: scale(1);
+      background-color: #000f;
+    }
+    100% {
+      transform: scale(1);
+      background-color: #23262d;
+    }
+  }
 `;
 
 const Heading = styled.div`
@@ -27,7 +53,6 @@ const ImageContainer = styled.div`
   height: 230px;
   width: 260px;
   padding: 30px;
-  margin-left: 20px;
 `;
 const EducationContainer = styled.div`
   /* border: 2px solid yellow; */
@@ -42,6 +67,24 @@ const Paragraph = styled.p`
   color: white;
   margin: 10px;
   text-align: justify;
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    text-align: none;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    text-align: none;
+  }
+  @media screen and (max-width: 481px) {
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    text-align: none;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -55,6 +98,10 @@ const EducationItem = styled.li`
   color: white;
   font-family: "QuickSand";
   font-weight: 12px;
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+    text-align: center;
+  }
 `;
 const HighLight = styled.span`
   color: #e91e63;
