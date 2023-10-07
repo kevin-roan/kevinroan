@@ -17,7 +17,7 @@ const Home = () => {
       <div style={{ height: "100vh", backgroundColor: "#DCDFE4" }}>
         <AboutMe />
       </div>
-      <div style={{ height: "100vh", backgroundColor: "#72757e" }}>
+      <div style={{ height: "100vh", backgroundColor: "#282C34" }}>
         <Projects />
       </div>
     </>

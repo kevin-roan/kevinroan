@@ -2,9 +2,10 @@ import React from "react";
 import { BookingCard } from "../components/Card";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
+import { CarouselCustomNavigation } from "../components/Carousel";
 
 const HeaderStyled = styled.h1`
-  color: #282c34;
+  color: #fff;
   font-size: 7vh;
   display: flex;
   align-items: center;
@@ -26,51 +27,66 @@ const CardStyled = styled.div`
 `;
 
 const CardContainer = styled.div`
-  border: 2px solid black;
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+  /* background-color: #282c34; */
   background-color: #282c34;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 270px;
+  height: 400px;
   margin: 20px;
+  margin-top: 10%;
   margin-left: 50vh;
   max-width: 900px;
   width: 60%;
 `;
 const ImageContainer = styled.div`
   border: 5px solid white;
-  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.9); */
   display: flex;
   height: 250px;
   width: 250px;
   margin: 10px;
 `;
 const ContentContainer = styled.div`
-  margin: 20px;
-  margin-left: 100px;
-  height: 80%;
+  /* background-color: #282c34; */
+  margin-left: 30px;
+  height: 100%;
+  h1 {
+    color: #e91e63;
+    font-family: "QuickSand";
+    font-size: 27px;
+  }
+  span {
+    color: #cddc39;
+  }
+  p {
+    color: white;
+    font-family: "QuickSand";
+    font-size: 20px;
+    text-align: justify;
+    max-width: 700px;
+    padding: 10px;
+    padding-left: 0;
+    margin-bottom: 10%;
+  }
 `;
-const ProjectHeading = styled.div`
-  color: #cddc39;
-  font-family: "QuickSand";
-  font-size: 24px;
-`;
-const Paragraph = styled.div`
-  color: white;
-  font-family: "QuickSand";
-  font-size: 17px;
-  text-align: justify;
-  max-width: 700px;
-`;
+
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: right;
   margin: 10px;
   Button {
+    font-family: "QuickSand";
+    font-width: 80%;
     margin-right: 10px;
     color: #fff;
-    background-color: black;
+    background-color: #010101;
+    border: 2px solid white;
+    border-radius: 0;
+  }
+  Button:hover {
+    background-color: #72757e;
   }
 `;
 
@@ -85,14 +101,13 @@ const Project = () => {
           />
         </ImageContainer>
         <ContentContainer>
-          <ProjectHeading>Project Name</ProjectHeading>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat. cillum sint consectetur
-            cupidatat. cillum sint consectetur cupidatat.
-          </Paragraph>
+          <h1>
+            [<span>RestoHub</span>] - React Restorant Website{" "}
+          </h1>
+          <p>
+            My first fullstack web app that helps keeping track of your cookie
+            debts. For a colleague to whom I owe some cookies. A lot actually.{" "}
+          </p>
           <ButtonContainer>
             <Button variant="contained">Demo</Button>
             <Button variant="contained">GitHub</Button>
@@ -107,11 +122,9 @@ const Projects = () => {
   return (
     <>
       <HeaderStyled>Projects</HeaderStyled>
-      <div>
-        <Project />
-        <Project />
-        <Project />
-      </div>
+      <CardContainer>
+        <CarouselCustomNavigation />
+      </CardContainer>
     </>
   );
 };
