@@ -37,7 +37,6 @@ const LayoutRoutes = () => {
           />
         ))}
       </Routes>
-      <FooterWithLogo />
     </Router>
   );
 };

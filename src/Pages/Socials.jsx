@@ -83,9 +83,7 @@ const ImageContainer = styled.div`
 export default function HireMe() {
   return (
     <>
-      <div className="ludan">
-        <HeaderStyled>Social Handles</HeaderStyled>
-      </div>
+      <HeaderStyled>Social Handles</HeaderStyled>
       <SocialContainer>
         <Card
           className="mt-6 w-96 "
