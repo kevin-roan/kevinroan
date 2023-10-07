@@ -28,7 +28,6 @@ const LayoutRoutes = () => {
   ];
   return (
     <Router basename="/">
-      <StepperWithIcon />
       <Routes>
         {routes.map((route) => (
           <Route
