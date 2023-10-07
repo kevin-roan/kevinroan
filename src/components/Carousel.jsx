@@ -1,5 +1,8 @@
 import { Button, Carousel, Typography } from "@material-tailwind/react";
-import project from "../assets/computer.svg";
+import kevinRoan from "../assets/images/projects/kevinroan.png";
+// import blogSite from "../assets/images/projects/blog-site.png";
+import restoHub from "../assets/images/projects/restohub.png";
+// import educationSite from "../assets/images/projects/education-site.png";
 
 export function CarouselCustomNavigation() {
   return (
@@ -19,17 +22,36 @@ export function CarouselCustomNavigation() {
         </div>
       )}
     >
-      <img src={project} alt="image 1" className="h-full w-full object-cover" />
       <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+        src={restoHub}
+        alt="image 1"
+        className="h-full w-full object-cover"
+      />
+      {/*
+      <img
+        src={blogSite}
         alt="image 2"
         className="h-full w-full object-cover"
       />
       <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+        src={educationSite}
         alt="image 3"
         className="h-full w-full object-cover"
       />
+      <img
+        src={kevinRoan}
+        alt="image 4"
+        className="4-full w-full object-cover"
+      />
+     */}
+      <Figure />
+    </Carousel>
+  );
+}
+
+export const Figure = () => {
+  return (
+    <div>
       <figcaption className="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 justify-between rounded-xl border border-white bg-white/75 py-4 px-6 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
         <div>
           <Typography variant="h5" color="blue-gray">
@@ -44,6 +66,6 @@ export function CarouselCustomNavigation() {
           <Button style={{ margin: "10px", width: "100px" }}>Source</Button>
         </Typography>
       </figcaption>
-    </Carousel>
+    </div>
   );
-}
+};
