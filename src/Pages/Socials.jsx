@@ -20,28 +20,30 @@ const SocialContainer = styled.h1`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #282c34;
-  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
-  /* border: 1px solid black; */
   margin: 0 auto;
   width: 50%;
   @media screen and (max-width: 480px) {
     margin-top: 30%;
-    height: auto;
+    height: 500px;
     width: 100%;
   }
   form {
     border: 4px solid purple;
   }
   card {
+    background-color: #282c34;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 300px;
-    width: 400px;
+    height: 343px;
+    width: 388px;
   }
   item {
     color: #000;
+    border: 2px solid #282c34;
     background-color: white;
     border-radius: 10px;
     height: 100px;
@@ -51,15 +53,31 @@ const SocialContainer = styled.h1`
     justify-content: center;
     align-items: center;
   }
+
+  item:hover {
+    transform: scale(1.2);
+  }
   i {
-    color: #000;
+    color: #282c34;
     font-size: 4rem;
   }
   h2 {
+    color: #fff;
     font-family: "QuickSand";
     font-size: 20px;
     margin-bottom: 10px;
   }
+  Button {
+    margin-left: 10px;
+  }
+`;
+
+const ImageContainer = styled.div`
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 `;
 
 export default function HireMe() {
@@ -69,15 +87,31 @@ export default function HireMe() {
         <HeaderStyled>Social Handles</HeaderStyled>
       </div>
       <SocialContainer>
-        <Card className="mt-6 w-96 ">
+        <Card
+          className="mt-6 w-96 "
+          style={{
+            backgroundColor: "#282C34",
+            boxShadow: " 0px 0px 100px rgba(0, 0, 0, 0.5)",
+          }}
+        >
+          <ImageContainer>
+            <img
+              src="https://prettycoffee.github.io/static/media/kitty.c5cd51eb02bd57a1ad5d.webp"
+              alt="ludan"
+            />
+          </ImageContainer>
           <CardBody>
-            <div className="w-72 flex-col items-end gap-6">
+            <div className="w-79 flex-col items-end gap-6">
               <Typography variant="h2" component="h2">
                 Send me a message
               </Typography>
-              <div>
-                <Input label="Message" />
-                <Button>Send</Button>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <Input
+                  label="Message"
+                  variant="outlined"
+                  style={{ backgroundColor: "#fff" }}
+                />
+                <Button color="pink">Send</Button>
               </div>
             </div>
           </CardBody>
@@ -93,7 +127,7 @@ export default function HireMe() {
             <i class="fa-brands fa-twitter"></i>
           </item>
           <item>
-            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-instagram"></i>{" "}
           </item>
         </card>
       </SocialContainer>
