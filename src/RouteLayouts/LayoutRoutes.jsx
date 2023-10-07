@@ -5,7 +5,7 @@ import TextTyper from "../Pages/TextTyper";
 import Projects from "../Pages/Projects";
 import NotFound from "../Pages/NotFound";
 import { StepperWithIcon } from "../components/Steper";
-import { SimpleFooter } from "../components/Footer";
+import { FooterWithLogo } from "../components/Footer";
 
 const LayoutRoutes = () => {
   const routes = [
@@ -37,6 +37,7 @@ const LayoutRoutes = () => {
           />
         ))}
       </Routes>
+      <FooterWithLogo />
     </Router>
   );
 };
