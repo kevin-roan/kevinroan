@@ -1,9 +1,9 @@
 import React from "react";
 import ImageAnimation from "../components/ImageAnimation";
 import NavBar from "../components/NavBar";
-import About from "../Pages/About";
+import TextTyper from "../Pages/TextTyper";
 import Projects from "../Pages/Projects";
-import HireMe from "./HireMe";
+import Socials from "./Socials";
 import AboutMe from "./AboutMe";
 
 const Home = () => {
@@ -12,13 +12,16 @@ const Home = () => {
       <div style={{ height: "100vh" }}>
         <NavBar />
         <ImageAnimation />
-        <About />
+        <TextTyper />
       </div>
       <div style={{ height: "100vh", backgroundColor: "#DCDFE4" }}>
         <AboutMe />
       </div>
       <div style={{ height: "100vh", backgroundColor: "#282C34" }}>
         <Projects />
+      </div>
+      <div style={{ height: "100vh", backgroundColor: "#72757E" }}>
+        <Socials />
       </div>
     </>
   );

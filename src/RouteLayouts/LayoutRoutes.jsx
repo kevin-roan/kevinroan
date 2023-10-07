@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NavBar from "../components/NavBar";
 import Home from "../Pages/Home";
-import About from "../Pages/About";
+import TextTyper from "../Pages/TextTyper";
 import Projects from "../Pages/Projects";
 import NotFound from "../Pages/NotFound";
+import { StepperWithIcon } from "../components/Steper";
 import { SimpleFooter } from "../components/Footer";
 
 const LayoutRoutes = () => {
@@ -19,7 +19,7 @@ const LayoutRoutes = () => {
     },
     {
       path: "/about",
-      component: About,
+      component: TextTyper,
     },
     {
       path: "/projects",
@@ -28,6 +28,7 @@ const LayoutRoutes = () => {
   ];
   return (
     <Router basename="/">
+      <StepperWithIcon />
       <Routes>
         {routes.map((route) => (
           <Route

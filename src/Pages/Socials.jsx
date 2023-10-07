@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Form } from "../components/Form";
+
 import {
   Card,
   CardBody,
@@ -30,7 +30,7 @@ export function SimpleCard() {
 }
 
 const HeaderStyled = styled.h1`
-  color: #72757e;
+  color: #23262d;
   font-size: 7vh;
   display: flex;
   align-items: center;
@@ -43,7 +43,7 @@ export default function HireMe() {
   return (
     <>
       <div className="ludan">
-        <HeaderStyled>Hire Me</HeaderStyled>
+        <HeaderStyled>Social Handles</HeaderStyled>
       </div>
       <div className="ludan"></div>
     </>

@@ -40,8 +40,8 @@ export function CarouselCustomNavigation() {
           </Typography>
         </div>
         <Typography variant="h5" color="blue-gray">
-          <Button style={{ margin: "10px" }}>Demo</Button>
-          <Button>Source</Button>
+          <Button style={{ margin: "10px", width: "100px" }}>Demo</Button>
+          <Button style={{ margin: "10px", width: "100px" }}>Source</Button>
         </Typography>
       </figcaption>
     </Carousel>
