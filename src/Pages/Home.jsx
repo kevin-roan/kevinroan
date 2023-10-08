@@ -5,6 +5,7 @@ import TextTyper from "../Pages/TextTyper";
 import Projects from "../Pages/Projects";
 import Socials from "./Socials";
 import AboutMe from "./AboutMe";
+import Iphone from "../components/IPhone";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
         <Projects />
       </div>
       <div style={{ height: "100vh", backgroundColor: "#72757E" }}>
-        <Socials />
+        <Iphone />
       </div>
     </>
   );
