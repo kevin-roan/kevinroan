@@ -27,18 +27,20 @@ const Img = styled.img`
   justify-content: center;
   object-fit: contain;
   @media screen and (max-width: 480px) {
+    height: 740px;
     object-fit: cover;
     overflow: auto;
   }
 `;
 
 const Video = styled.img`
-  width: 600px;
-  height: 700px;
-  padding: 34px;
-  object-fit: cover;
-  /* border: 1px solid white; */
-  border-radius: 100px;
+  @media screen and (max-width: 480px) {
+    height: 740px;
+    padding: 40px;
+    object-fit: cover;
+    /* border: 1px solid white; */
+    border-radius: 100px;
+  }
 `;
 
 const IphoneContainer = styled.div`
