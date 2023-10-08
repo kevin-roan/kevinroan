@@ -49,7 +49,7 @@ const IphoneContainer = styled.div`
   max-width: 100%;
 `;
 
-export default function HireMe() {
+export default function Iphone() {
   return (
     <>
       <HeaderStyled>Social Handles</HeaderStyled>
