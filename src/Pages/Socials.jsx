@@ -80,7 +80,7 @@ const ImageContainer = styled.div`
   margin: 0 auto;
 `;
 
-export default function HireMe() {
+export default function Socials() {
   return (
     <>
       <HeaderStyled>Social Handles</HeaderStyled>

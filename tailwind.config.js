@@ -14,7 +14,7 @@ module.exports = withMT({
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("daisyui")],
   colors: {
     sky: {
       50: "#f0f9ff",
