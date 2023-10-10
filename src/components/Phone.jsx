@@ -26,17 +26,14 @@ const Container = styled.div`
     background-color: #000aa;
   }
   item {
-    color: #000;
-    border: 2px solid #282c34;
-    background-color: white;
     border-radius: 10px;
     margin: 30px;
   }
-  item:hover {
-    transform: scale(1.2);
-  }
+
   icon {
     font-size: 4rem;
+    margin: 4px;
+    border-radius: 20px;
   }
 `;
 export default function Phone() {
