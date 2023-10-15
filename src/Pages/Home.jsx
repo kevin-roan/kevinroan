@@ -8,6 +8,14 @@ import Phone from "../components/Phone";
 import Extra from "../Pages/Extra";
 import Skills from "../Pages/Skills";
 
+const DownloadCv = () => {
+  const fileUrl = "/kevinroan-cv.pdf";
+  const link = document.createElement("a");
+  link.href = fileUrl;
+  link.download = "kevinroan-cv.pdf";
+  link.click();
+};
+
 const Home = () => {
   return (
     <>
@@ -17,7 +25,7 @@ const Home = () => {
         <TextTyper />
       </div>
       <div style={{ height: "100vh", backgroundColor: "#DCDFE4" }}>
-        <AboutMe />
+        <AboutMe downloadCv={DownloadCv} />
       </div>
       <div style={{ height: "100vh", backgroundColor: "#72757E" }}>
         <Skills />

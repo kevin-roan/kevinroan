@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import dp from "../assets/images/dp.jpg";
+import { Button } from "@material-tailwind/react";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 const CardContainer = styled.div`
   display: flex;
@@ -106,7 +108,7 @@ const EducationItem = styled.li`
 const HighLight = styled.span`
   color: #e91e63;
 `;
-export default function AboutMe() {
+export default function AboutMe({ downloadCv }) {
   return (
     <div className="container">
       <CardContainer>
@@ -145,6 +147,15 @@ export default function AboutMe() {
             <HighLight>React</HighLight> and <HighLight>Typescript</HighLight>,
             try to design my own stuff and build cool web apps while learning
             new things.
+            <Button
+              color="lime"
+              className="flex items-center mt-4 gap-3 white"
+              size="sm"
+              onClick={() => downloadCv()}
+            >
+              <ArrowDownTrayIcon strokeWidth={2} className="h-4 w-4" /> Download
+              CV
+            </Button>
           </Paragraph>
         </ContentContainer>
       </CardContainer>
