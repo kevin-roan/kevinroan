@@ -56,38 +56,46 @@ const LeftStat = () => {
   );
 };
 
+const MobileView = () => {
+  return (
+    <div className="block sm:hidden ">
+      <Carousel
+        className="rounded-xl w-96 "
+        navigation={({ setActiveIndex, activeIndex, length }) => (
+          <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+            {new Array(length).fill("").map((_, i) => (
+              <span
+                key={i}
+                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                  activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                }`}
+                onClick={() => setActiveIndex(i)}
+              />
+            ))}
+          </div>
+        )}
+      >
+        <RightStat />
+        <LeftStat />
+      </Carousel>
+    </div>
+  );
+};
+
 const Skills = () => {
   return (
     <div>
       <HeaderStyled>Skills</HeaderStyled>
       <Container>
-        <leftpane className="hidden sm:block">
-          <LeftStat />
-        </leftpane>
-        <rightpane className="hidden sm:block">
-          <RightStat />
-        </rightpane>
-        <div className="block sm:hidden ">
-          <Carousel
-            className="rounded-xl w-screen m-9"
-            navigation={({ setActiveIndex, activeIndex, length }) => (
-              <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-                {new Array(length).fill("").map((_, i) => (
-                  <span
-                    key={i}
-                    className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                      activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-                    }`}
-                    onClick={() => setActiveIndex(i)}
-                  />
-                ))}
-              </div>
-            )}
-          >
-            <RightStat />
+        <div className="hidden sm:block">
+          <leftpane>
             <LeftStat />
-          </Carousel>
+          </leftpane>
+          <rightpane>
+            <RightStat />
+          </rightpane>
         </div>
+        <MobileView />
       </Container>
     </div>
   );
