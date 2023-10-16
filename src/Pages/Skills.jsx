@@ -1,6 +1,99 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { IconButton } from "@material-tailwind/react";
+import { Carousel } from "@material-tailwind/react";
+
+const skills = [
+  { icon: "", name: "NodeJs", title: "2022-Present", desc: "Proficient" },
+  { icon: "", name: "ExpressJs", title: "2022-Present", desc: "Proficient" },
+  { icon: "", name: "MongoDB", title: "2022-Present", desc: "Proficient" },
+  { icon: "", name: "Sql", title: "2022-2023", desc: "Familiar" },
+  { icon: "", name: "REST API", title: "2023-Present", desc: "Familiar" },
+];
+
+const uiskills = [
+  { icon: "", name: "React", title: "2023-Present", desc: "Expert" },
+  { icon: "", name: "TypeScript", title: "2023-Present", desc: "Expert" },
+  { icon: "", name: "TailwindCSS", title: "2023-Present", desc: "Expert" },
+  { icon: "", name: "Material UI", title: "2023-Present", desc: "Expert" },
+  { icon: "", name: "NextJs", title: "2023-Present", desc: "Proficient" },
+];
+
+const RightStat = () => {
+  return (
+    <div className="flex items-center w-half p-4">
+      <div className="stats stats-vertical shadow w-full ">
+        <div className="stat">
+          {uiskills.map((skill) => (
+            <>
+              <div className="stat-title">{skill.title}</div>
+              <div className="stat-value">{skill.name}</div>
+              <div className="stat-desc">{skill.desc}</div>
+            </>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const LeftStat = () => {
+  return (
+    <>
+      <div className="flex items-center w-half p-4 sm:block">
+        <div className="stats stats-vertical shadow w-full">
+          <div className="stat">
+            {skills.map((skill, index) => (
+              <>
+                <div className="stat-title">{skill.title}</div>
+                <div className="stat-value">{skill.name}</div>
+                <div className="stat-desc">{skill.desc}</div>
+              </>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const Skills = () => {
+  return (
+    <div>
+      <HeaderStyled>Skills</HeaderStyled>
+      <Container>
+        <leftpane className="hidden sm:block">
+          <LeftStat />
+        </leftpane>
+        <rightpane className="hidden sm:block">
+          <RightStat />
+        </rightpane>
+        <div className="block sm:hidden ">
+          <Carousel
+            className="rounded-xl w-screen m-9"
+            navigation={({ setActiveIndex, activeIndex, length }) => (
+              <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                {new Array(length).fill("").map((_, i) => (
+                  <span
+                    key={i}
+                    className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                      activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                    }`}
+                    onClick={() => setActiveIndex(i)}
+                  />
+                ))}
+              </div>
+            )}
+          >
+            <RightStat />
+            <LeftStat />
+          </Carousel>
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+export default Skills;
 
 const HeaderStyled = styled.h1`
   color: #23262d;
@@ -14,29 +107,6 @@ const HeaderStyled = styled.h1`
     font-size: 6vh;
   }
 `;
-
-const skills = [
-  {
-    icon: "",
-    name: "React",
-  },
-  {
-    icon: "",
-    name: "TypeScript",
-  },
-  {
-    icon: "",
-    name: "TailwindCSS",
-  },
-  {
-    icon: "",
-    name: "NodeJS",
-  },
-  {
-    icon: "",
-    name: "React",
-  },
-];
 
 const Container = styled.div`
   display: flex;
@@ -86,66 +156,3 @@ const Container = styled.div`
     transform: scale(1.01);
   }
 `;
-
-const Skills = () => {
-  return (
-    <div>
-      <HeaderStyled>Skills</HeaderStyled>
-      <Container>
-        <leftpane>
-          <div className="items-center w-half p-4 hidden sm:block">
-            <IconStat />
-          </div>
-        </leftpane>
-        <rightpane>
-          <div className="flex items-center w-half p-4">
-            <IconStat />
-          </div>
-        </rightpane>
-      </Container>
-    </div>
-  );
-};
-
-export default Skills;
-
-const IconStat = () => {
-  return (
-    <div className="stats stats-vertical shadow w-full">
-      <div className="stat">
-        <div className="stat-title">Downloads</div>
-        <div className="stat-value">React</div>
-        <div className="stat-desc">Jan 1st - Feb 1st</div>
-      </div>
-
-      <div className="stat">
-        <div className="stat-title">New Users</div>
-        <div className="stat-value">TypeScript</div>
-        <div className="stat-desc">↗︎ 400 (22%)</div>
-      </div>
-
-      <div className="stat">
-        <div className="stat-title">New Registers</div>
-        <div className="stat-value">Nodejs</div>
-        <div className="stat-desc">↘︎ 90 (14%)</div>
-      </div>
-      <div className="stat">
-        <div className="stat-title">New Registers</div>
-        <div className="stat-value">NextJs</div>
-        <div className="stat-desc">↘︎ 90 (14%)</div>
-      </div>
-    </div>
-  );
-};
-
-const SingleIconState = () => {
-  return (
-    <div className="stats shadow">
-      <div className="stat">
-        <div className="stat-title">Total Page Views</div>
-        <div className="stat-value">89,400</div>
-        <div className="stat-desc">21% more than last month</div>
-      </div>
-    </div>
-  );
-};
