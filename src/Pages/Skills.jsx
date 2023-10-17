@@ -39,7 +39,7 @@ const RightStat = () => {
 const LeftStat = () => {
   return (
     <>
-      <div className="flex items-center w-half p-4 sm:block">
+      <div className="flex items-center w-half p-4 ">
         <div className="stats stats-vertical shadow w-full">
           <div className="stat">
             {skills.map((skill, index) => (
@@ -60,7 +60,7 @@ const MobileView = () => {
   return (
     <div className="block sm:hidden ">
       <Carousel
-        className="rounded-xl w-96 "
+        className="rounded-xl border w-96 m-3 pt-4"
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
             {new Array(length).fill("").map((_, i) => (
@@ -87,14 +87,12 @@ const Skills = () => {
     <div>
       <HeaderStyled>Skills</HeaderStyled>
       <Container>
-        <div className="hidden sm:block">
-          <leftpane>
-            <LeftStat />
-          </leftpane>
-          <rightpane>
-            <RightStat />
-          </rightpane>
-        </div>
+        <leftpane className="hidden sm:block">
+          <LeftStat />
+        </leftpane>
+        <rightpane className="hidden sm:block">
+          <RightStat />
+        </rightpane>
         <MobileView />
       </Container>
     </div>
@@ -121,7 +119,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  border: 2px solid black;
+  border: 1px solid black;
+  border-radius: 10px;
   height: 600px;
   width: 1000px;
   background-color: #23262d;
