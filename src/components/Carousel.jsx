@@ -3,9 +3,11 @@ import kevinRoan from "../assets/images/projects/kevinroan.png";
 import blogSite from "../assets/images/projects/blog-site.png";
 import restoHub from "../assets/images/projects/restohub.png";
 import educationSite from "../assets/images/projects/education-site.png";
+import React from "react";
 
 const projects = [
   {
+    id: 0,
     src: restoHub,
     name: "RestoHub - React FrontEnd Website",
     date: "2023 August",
@@ -13,6 +15,7 @@ const projects = [
     source: "https://github.com/kevin-roan/restohub",
   },
   {
+    id: 1,
     src: kevinRoan,
     name: "PortFolio- You are currently looking at it.",
     date: "2023 August",
@@ -20,6 +23,7 @@ const projects = [
     source: "https://github.com/kevin-roan/kevinroan",
   },
   {
+    id: 2,
     src: blogSite,
     name: "My Bloging Site - React FrontEnd Website",
     date: "2023 July",
@@ -27,6 +31,7 @@ const projects = [
     source: "https://github.com/kevin-roan/blog-site",
   },
   {
+    id: 3,
     src: educationSite,
     name: "EduTech- React FrontEnd Website",
     date: "2023 Jun",
@@ -61,6 +66,7 @@ export function CarouselCustomNavigation() {
             className="h-full w-full object-cover"
           />
           <Figure
+            key={index}
             projectname={project.name}
             date={project.date}
             demo={project.demo}
@@ -72,7 +78,7 @@ export function CarouselCustomNavigation() {
   );
 }
 
-export const Figure = ({ projectname, date, demo, source }) => {
+export const Figure = React.memo(({ projectname, date, demo, source }) => {
   return (
     <div>
       <figcaption className="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 justify-between rounded-xl border border-white bg-white/75 py-4 px-6 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
@@ -95,4 +101,4 @@ export const Figure = ({ projectname, date, demo, source }) => {
       </figcaption>
     </div>
   );
-};
+});
