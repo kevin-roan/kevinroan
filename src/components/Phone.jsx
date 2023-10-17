@@ -2,6 +2,10 @@ import React from "react";
 import { Typography } from "@mui/material";
 import { Button, Input, Card, CardBody } from "@material-tailwind/react";
 import styled from "@emotion/styled";
+import instagram from "../assets/images/icons/instagram.png";
+import twitter from "../assets/images/icons/twitter.png";
+import github from "../assets/images/icons/github.png";
+import linkedin from "../assets/images/icons/linkedin.png";
 
 const HeaderStyled = styled.h1`
   color: #23262d;
@@ -25,15 +29,18 @@ const Container = styled.div`
     color: #000;
     background-color: #000aa;
   }
+  itemcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+  }
   item {
     border-radius: 10px;
     margin: 30px;
-  }
-
-  icon {
-    font-size: 4rem;
-    margin: 4px;
-    border-radius: 20px;
+    img {
+      height: 55px;
+      width: 55px;
+    }
   }
 `;
 export default function Phone() {
@@ -70,30 +77,28 @@ export default function Phone() {
               <div className="absolute center justify-between rounded-xl border m-4 ">
                 <Card className="w-full max-w-[26rem] shadow-lg bg-white-400 ">
                   <CardBody>
-                    <item>
-                      <icon
-                        style={{ color: "black" }}
-                        class="fa-brands fa-github"
-                      ></icon>
-                    </item>
-                    <item>
-                      <icon
-                        style={{ color: "#0073B1" }}
-                        class="fa-brands fa-linkedin"
-                      ></icon>
-                    </item>
-                    <item>
-                      <icon
-                        style={{ color: "#1C96E8" }}
-                        class="fa-brands fa-twitter"
-                      ></icon>
-                    </item>
-                    <item>
-                      <icon
-                        style={{ color: "#F32A64" }}
-                        class="fa-brands fa-square-instagram"
-                      ></icon>{" "}
-                    </item>
+                    <itemcontainer>
+                      <item>
+                        <a href="https://github.com/kevin-roan">
+                          <img src={github} alt="github" />
+                        </a>
+                      </item>
+                      <item>
+                        <a href="https://www.linkedin.com/in/kevinroan/">
+                          <img src={linkedin} alt="linkedin" />
+                        </a>
+                      </item>
+                      <item>
+                        <a href="https://x.com/kevinroan_">
+                          <img src={twitter} alt="twitter" />
+                        </a>
+                      </item>
+                      <item>
+                        <a href="https://instagram.com/kevinroan_">
+                          <img src={instagram} alt="instagram" />
+                        </a>
+                      </item>
+                    </itemcontainer>
                   </CardBody>
                 </Card>
               </div>
