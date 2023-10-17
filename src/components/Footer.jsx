@@ -17,7 +17,7 @@ function NavList() {
         className="p-1 font-medium"
       >
         <a
-          href="#"
+          href="https://kevin-roan.github.io/blog-site/"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           Blogs
@@ -30,7 +30,7 @@ function NavList() {
         className="p-1 font-medium"
       >
         <a
-          href="#"
+          href="https://github.com/kevin-roan"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
           GitHub
@@ -43,10 +43,10 @@ function NavList() {
         className="p-1 font-medium"
       >
         <a
-          href="#"
+          href="https://www.youtube.com/@xtan-yt/"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Youtube
+          YouTube
         </a>
       </Typography>
     </ul>
