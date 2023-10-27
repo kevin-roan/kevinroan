@@ -36,7 +36,7 @@ const ExtraLinks = ({ item }) => {
       <a href="#" className="inline-block">
         <Button
           color="white"
-          variant="outlined"
+          variant="contained"
           className="flex items-center gap-2 white "
         >
           Go
@@ -109,10 +109,7 @@ const Container = styled.div`
     height: 80%;
     width: 40%;
     border: 2px solid #fff;
-background-image: url(${nature});
-  background-size: cover; 
-  background-position: center;
-
+    background-color: #e0e0e0;
     @media screen and (max-width: 480px) {
       width: 80%;
     }
@@ -127,16 +124,18 @@ const LinkHeading = styled.div`
   align-items: left;
   justify-content: left;
   font-family: QuickSand;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #2ec27e;
   @media screen and (max-width: 480px) {
     font-size: 6vh;
   }
 `;
+
 const ExtraLinksContainer = styled.div`
   margin: 10px;
-  background-color: "transparent";
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
   margin-top: 25px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow:
+    20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
 `;
