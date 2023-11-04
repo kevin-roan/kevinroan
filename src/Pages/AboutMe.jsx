@@ -4,20 +4,25 @@ import dp from "../assets/images/dp.jpg";
 import { Button } from "@material-tailwind/react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
+const AboutContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+`;
+
 const CardContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
+  border: 2px solid white;
   background-color: #23262d;
   border-radius: 9px;
-  margin-top: 25vh;
   height: 500px;
   width: 900px;
   padding: 20px;
-  max-width: 100%;
+  margin: 0 auto;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.8);
-  position: relative;
   animation: breathAnimation 3s ease-in-out infinite;
   @media screen and (max-width: 480px) and (max-width: 1024px) {
     flex-direction: column;
@@ -57,7 +62,6 @@ const ImageContainer = styled.div`
   padding: 30px;
 `;
 const EducationContainer = styled.div`
-  /* border: 2px solid yellow; */
   width: 100%;
   padding: 10px;
   margin: 10px;
@@ -110,7 +114,7 @@ const HighLight = styled.span`
 `;
 export default function AboutMe({ downloadCv }) {
   return (
-    <div className="container">
+    <AboutContainer>
       <CardContainer>
         <div
           style={{
@@ -159,6 +163,6 @@ export default function AboutMe({ downloadCv }) {
           </Paragraph>
         </ContentContainer>
       </CardContainer>
-    </div>
+    </AboutContainer>
   );
 }
