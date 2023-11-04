@@ -24,12 +24,7 @@ const Home = () => {
         <ImageAnimation />
         <TextTyper />
       </div>
-      <div
-        style={{
-          height: "100vh",
-          backgroundColor: "#DCDFE4",
-        }}
-      >
+      <div style={{ height: "100vh", backgroundColor: "#DCDFE4" }}>
         <AboutMe downloadCv={DownloadCv} />
       </div>
       <div style={{ height: "100vh", backgroundColor: "#72757E" }}>
