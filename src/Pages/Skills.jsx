@@ -108,7 +108,6 @@ const HeaderStyled = styled.h1`
   align-items: center;
   justify-content: center;
   font-family: QuickSand;
-  margin-bottom: 10px;
   @media screen and (max-width: 480px) {
     font-size: 6vh;
   }
@@ -121,9 +120,10 @@ const Container = styled.div`
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
-  height: 600px;
-  width: 1000px;
+  width: 50vmax;
+  max-height: 50vmax;
   background-color: #23262d;
+  padding: 1vmax;
   margin-top: 4%;
   @media screen and (max-width: 480px) {
     flex-direction: column;
@@ -133,7 +133,6 @@ const Container = styled.div`
   }
 
   leftpane {
-    height: 80%;
     width: 40%;
     border: 2px solid black;
     margin: 10px;
@@ -148,7 +147,6 @@ const Container = styled.div`
     border-radius: 20px;
     background-color: #1c1f26;
     margin: 10px;
-    height: 80%;
     width: 40%;
     border: 2px solid #e91e63;
     box-shadow: 0 0 10px 2px #e91e63;

@@ -121,7 +121,7 @@ const HeaderStyled = styled.h1`
   justify-content: center;
   margin-bottom: -7vh;
   font-family: QuickSand;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 850px) {
     font-size: 6vh;
   }
 `;
@@ -143,7 +143,7 @@ const CardContainer = styled.div`
   width: 50vw;
   height: auto;
   marign: auto;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 850px) {
     flex-direction: column;
     width: 90%;
   }
@@ -155,7 +155,7 @@ const ImageContainer = styled.div`
   margin: 10px;
   padding: 1vmax;
   border-radius: 20px;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 850px) {
     display: flex;
     justify-content: center;
     align-items: center;
