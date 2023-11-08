@@ -125,16 +125,16 @@ export default function AboutMe({ downloadCv }) {
             <Paragraph>
               I am a 21 year old professional{" "}
               <HighLight>Web developer </HighLight>who earned a Bachelor of
-              Computer Application -<HighLight> BCA </HighLight>degree in 2023,
-              Since then, I have been working as a
+              Computer Application -<HighLight> BCA </HighLight>degree in 2023.
+              Since then, I've been working as a
               <HighLight> Freelance Web-Developer</HighLight>
             </Paragraph>
             <Paragraph>
               Most of my projects involve developing frontend applications using
-              <HighLight>React</HighLight> and <HighLight>Typescript</HighLight>
-              I also enjoy designing my own projects and creating innovative web
-              applications, all while continuing to learn and expand my
-              skillset.
+              <HighLight> React</HighLight> and{" "}
+              <HighLight>Typescript. </HighLight>I also enjoy designing my own
+              projects and creating innovative web applications, all while
+              continuing to learn and expand my skillset.
               <Button
                 color="lime"
                 className="flex items-center mt-4 gap-3 white"
