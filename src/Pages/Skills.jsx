@@ -1,105 +1,51 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Carousel } from "@material-tailwind/react";
+import { CgCPlusPlus } from "react-icons/cg";
+import {
+  DiJavascript1,
+  DiReact,
+  DiNodejs,
+  DiMongodb,
+  DiGit,
+  DiSass,
+} from "react-icons/di";
+import {
+  SiDocker,
+  SiDwm,
+  SiExpress,
+  SiFirebase,
+  SiLinux,
+  SiNeovim,
+  SiNextdotjs,
+  SiPostman,
+  SiSocketdotio,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { Github } from "../components";
 
 const skills = [
-  { icon: "", name: "NodeJs", title: "2022-Present", desc: "Proficient" },
-  { icon: "", name: "ExpressJs", title: "2022-Present", desc: "Proficient" },
-  { icon: "", name: "MongoDB", title: "2022-Present", desc: "Proficient" },
-  { icon: "", name: "Sql", title: "2022-2023", desc: "Familiar" },
-  { icon: "", name: "REST API", title: "2023-Present", desc: "Familiar" },
+  { icon: <SiTypescript />, title: "TypeScript" },
+  { icon: <DiReact />, title: "React" },
+  { icon: <DiNodejs />, title: "Nodejs" },
+  { icon: <SiExpress />, title: "ExpressJs" },
+  { icon: <DiMongodb />, title: "MongoDb" },
+  { icon: <SiNextdotjs />, title: "NextJs" },
+  { icon: <DiGit />, title: "Git" },
+  { icon: <SiFirebase />, title: "FireBase" },
+  { icon: <SiSocketdotio />, title: "Socket.io" },
+  { icon: <DiReact />, title: "React Native" },
+  { icon: <DiSass />, title: "Sass" },
+  { icon: <SiTailwindcss />, title: "TailwindCSS" },
 ];
 
-const uiskills = [
-  { icon: "", name: "React", title: "2023-Present", desc: "Expert" },
-  { icon: "", name: "TypeScript", title: "2023-Present", desc: "Expert" },
-  { icon: "", name: "TailwindCSS", title: "2023-Present", desc: "Expert" },
-  { icon: "", name: "Material UI", title: "2023-Present", desc: "Expert" },
-  { icon: "", name: "NextJs", title: "2023-Present", desc: "Proficient" },
+const tools = [
+  { icon: <SiNeovim />, title: "NeoVim" },
+  { icon: <SiLinux />, title: "Linux" },
+  { icon: <SiDwm />, title: "Dwm" },
+  { icon: <SiDocker />, title: "Docker" },
+  { icon: <SiPostman />, title: "PostMan" },
 ];
-
-const RightStat = () => {
-  return (
-    <div className="flex items-center w-half p-4">
-      <div className="stats stats-vertical shadow w-full ">
-        <div className="stat">
-          {uiskills.map((skill) => (
-            <>
-              <div className="stat-title">{skill.title}</div>
-              <div className="stat-value">{skill.name}</div>
-              <div className="stat-desc">{skill.desc}</div>
-            </>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const LeftStat = () => {
-  return (
-    <>
-      <div className="flex items-center w-half p-4 ">
-        <div className="stats stats-vertical shadow w-full">
-          <div className="stat">
-            {skills.map((skill, index) => (
-              <>
-                <div className="stat-title">{skill.title}</div>
-                <div className="stat-value">{skill.name}</div>
-                <div className="stat-desc">{skill.desc}</div>
-              </>
-            ))}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const MobileView = () => {
-  return (
-    <div className="block sm:hidden ">
-      <Carousel
-        className="rounded-xl border w-96 m-3 pt-4"
-        navigation={({ setActiveIndex, activeIndex, length }) => (
-          <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-            {new Array(length).fill("").map((_, i) => (
-              <span
-                key={i}
-                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                  activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-                }`}
-                onClick={() => setActiveIndex(i)}
-              />
-            ))}
-          </div>
-        )}
-      >
-        <RightStat />
-        <LeftStat />
-      </Carousel>
-    </div>
-  );
-};
-
-const Skills = () => {
-  return (
-    <div>
-      <HeaderStyled>Skills</HeaderStyled>
-      <Container>
-        <leftpane className="hidden sm:block">
-          <LeftStat />
-        </leftpane>
-        <rightpane className="hidden sm:block">
-          <RightStat />
-        </rightpane>
-        <MobileView />
-      </Container>
-    </div>
-  );
-};
-
-export default Skills;
 
 const HeaderStyled = styled.h1`
   color: #23262d;
@@ -115,49 +61,99 @@ const HeaderStyled = styled.h1`
 
 const Container = styled.div`
   display: flex;
+  flex-direction: row;
+  width: 50vmax;
+  margin: 0 auto;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 50vmax;
-  max-height: 50vmax;
-  background-color: #23262d;
-  padding: 1vmax;
-  margin-top: 4%;
-  @media screen and (max-width: 480px) {
-    flex-direction: column;
-    height: 80vh;
+  @media screen and (max-width: 850px) {
     width: auto;
-    margin: 10px;
-  }
-
-  leftpane {
-    width: 40%;
-    border: 2px solid black;
-    margin: 10px;
-    border-radius: 20px;
-    border: 2px solid #ce3df3;
-    box-shadow: 0 0 10px 2px #ce3df3;
-    @media screen and (max-width: 480px) {
-      width: 80%;
-    }
-  }
-  rightpane {
-    border-radius: 20px;
-    background-color: #1c1f26;
-    margin: 10px;
-    width: 40%;
-    border: 2px solid #e91e63;
-    box-shadow: 0 0 10px 2px #e91e63;
-    @media screen and (max-width: 480px) {
-      width: 80%;
-    }
-  }
-  rightpane:hover {
-    transform: scale(1.01);
-  }
-  leftpane:hover {
-    transform: scale(1.01);
+    padding: 5vmax;
+    margin: auto;
+    overflow: auto;
   }
 `;
+
+const SkillBox = styled.div`
+  box-sizing: border-box;
+  border: 1px solid white;
+  width: 8vmax;
+  background-color: #23262d;
+  margin: 5px;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  transition: all 0.5s;
+  &:hover {
+    transform: translateY(-10px);
+    color: limegreen;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  @media screen and (max-width: 850px) {
+    width: 100%;
+    flex-direction: row;
+  }
+`;
+const Icon = styled.div`
+  font-size: 4vmax;
+  padding: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const SkillTitle = styled.div`
+  color: white;
+  font-size: 1vmax;
+  overflow: auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  font-family: "QuickSand";
+  @media screen and (max-width: 850px) {
+    font-size: 2vmax;
+  }
+`;
+const Wrapper = styled.div`
+  background-color: #72757e;
+  @media screen and (max-width: 850px) {
+    height: auto;
+  }
+`;
+const ToolsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export default function Skills() {
+  return (
+    <Wrapper>
+      <HeaderStyled>Skills</HeaderStyled>
+      <Container>
+        {skills.map((item, key) => (
+          <SkillBox key={key}>
+            <Icon>{item.icon}</Icon>
+            <SkillTitle>{item.title}</SkillTitle>
+          </SkillBox>
+        ))}
+      </Container>
+      <ToolsContainer>
+        <HeaderStyled>Tools</HeaderStyled>
+        <Container>
+          {tools.map((item, key) => (
+            <SkillBox key={key}>
+              <Icon>{item.icon}</Icon>
+              <SkillTitle>{item.title}</SkillTitle>
+            </SkillBox>
+          ))}
+        </Container>
+      </ToolsContainer>
+      <Github />
+    </Wrapper>
+  );
+}
