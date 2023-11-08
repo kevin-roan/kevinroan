@@ -5,6 +5,7 @@ import blogSite from "../assets/images/projects/blog-site.png";
 import restoHub from "../assets/images/projects/restohub.png";
 import educationSite from "../assets/images/projects/education-site.png";
 import keralaTours from "../assets/images/projects/keralaTours.png";
+import ludanChats from "../assets/images/projects/ludanChats.png";
 
 const Container = styled.div`
   background-color: #282c34;
@@ -143,11 +144,11 @@ const projects = [
   },
   {
     id: 4,
-    src: kevinRoan,
-    name: "LudanChats- Real time Chat App",
+    src: ludanChats,
+    name: "LudanChats - Real time Chat App",
     date: "2023 Jun",
-    demo: "https://kevinroan.github.io/education-site",
-    source: "https://github.com/kevin-roan/education-site",
+    demo: "https://kevinroan.github.io/ludanchats/",
+    source: "https://ludan-chats.vercel.app",
   },
 ];
 
