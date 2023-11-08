@@ -12,12 +12,14 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #282c34;
-  border-top: 2px solid white;
+  border-top: 1px solid white;
   min-height: 3vmax;
   padding: 0 1rem;
+  @media screen and (max-width: 850px) {
+    flex-direction: column;
+  }
 `;
 const Copyright = styled.div`
-  padding: 10px;
   font-size: 1rem;
   font-family: "QuickSand";
   font-weight: 500;
@@ -45,9 +47,15 @@ function Footer() {
           <a href="https://github.com/kevin-roan/">
             <AiFillGithub />
           </a>
-          <AiOutlineTwitter />
-          <AiFillInstagram />
-          <FaLinkedinIn />
+          <a href="https://x.com/kevinroan_/">
+            <AiOutlineTwitter />
+          </a>
+          <a href="https://instagram.com/kevinroan_/">
+            <AiFillInstagram />
+          </a>
+          <a href="https://linkedin.com/in/kevinroan/">
+            <FaLinkedinIn />
+          </a>
         </IconContainer>
       </Copyright>
     </Container>
