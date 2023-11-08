@@ -9,10 +9,10 @@ const HeaderStyled = styled.h1`
   font-size: 7vh;
   display: flex;
   justify-content: center;
-  margin-bottom: -7vh;
   font-family: QuickSand;
   @media screen and (max-width: 850px) {
     font-size: 6vh;
+    margin-bottom: 3vh;
   }
 `;
 
@@ -124,16 +124,17 @@ export default function AboutMe({ downloadCv }) {
             <Heading>Kevin Roan</Heading>
             <Paragraph>
               I am a 21 year old professional{" "}
-              <HighLight>Web developer </HighLight>which acquired his Bachelor
-              of Computer Application -<HighLight> BCA </HighLight>degree in
-              2023 and is working as a{" "}
-              <HighLight>Freelance Web-Developer </HighLight>since then.{" "}
+              <HighLight>Web developer </HighLight>who earned a Bachelor of
+              Computer Application -<HighLight> BCA </HighLight>degree in 2023,
+              Since then, I have been working as a
+              <HighLight> Freelance Web-Developer</HighLight>
             </Paragraph>
             <Paragraph>
-              Most of the time I develop frontend apps with{" "}
+              Most of my projects involve developing frontend applications using
               <HighLight>React</HighLight> and <HighLight>Typescript</HighLight>
-              , try to design my own stuff and build cool web apps while
-              learning new things.
+              I also enjoy designing my own projects and creating innovative web
+              applications, all while continuing to learn and expand my
+              skillset.
               <Button
                 color="lime"
                 className="flex items-center mt-4 gap-3 white"
