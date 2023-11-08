@@ -5,7 +5,7 @@
 }
 .text-typer {
   color: #fffa;
-  font-size: 45px;
+  font-size: 3vmax;
   display: inline-block;
 }
 
@@ -15,7 +15,7 @@
   font-size: 10vh;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .greeting-container {
     color: #fff;
     font-weight: 300;

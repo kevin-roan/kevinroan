@@ -30,10 +30,10 @@
   animation: jump 3s ease infinite 2s;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 850px) {
   .image-list {
     display: flex;
-    margin-top: 17vh;
+    margin-top: 10vh;
   }
   .computer {
     margin-left: 0;
