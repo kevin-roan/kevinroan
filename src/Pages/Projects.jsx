@@ -22,7 +22,6 @@ const HeaderStyled = styled.h1`
   margin-bottom: 10px;
 `;
 const ProjectContainer = styled.div`
-  // border: 2px solid white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -37,9 +36,9 @@ const ProjectContainer = styled.div`
 
 const ProjectStyled = styled.div`
   background-color: black;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 10px;
-  min-height: 25vmax;
+  min-height: 26vmax;
   width: 20vmax;
   overflow: auto;
   display: flex;
@@ -64,7 +63,6 @@ const ProjectStyled = styled.div`
   imagecontainer {
     margin: 10px;
     padding: 10px;
-    border: 2px solid white;
     border-radius: 10px;
     img {
       border-radius: 10px;
