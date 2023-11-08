@@ -23,7 +23,6 @@ const Home = () => {
       </div>
       <Skills />
       <Projects />
-      <Socials />
     </>
   );
 };

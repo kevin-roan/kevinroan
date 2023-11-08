@@ -6,6 +6,7 @@ import restoHub from "../assets/images/projects/restohub.png";
 import educationSite from "../assets/images/projects/education-site.png";
 import keralaTours from "../assets/images/projects/keralaTours.png";
 import ludanChats from "../assets/images/projects/ludanChats.png";
+import { Footer } from "../components";
 
 const Container = styled.div`
   background-color: #282c34;
@@ -168,6 +169,7 @@ export default function Projects() {
           />
         ))}
       </ProjectContainer>
+      <Footer />
     </Container>
   );
 }
