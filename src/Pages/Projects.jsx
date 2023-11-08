@@ -6,6 +6,7 @@ import restoHub from "../assets/images/projects/restohub.png";
 import educationSite from "../assets/images/projects/education-site.png";
 import keralaTours from "../assets/images/projects/keralaTours.png";
 import ludanChats from "../assets/images/projects/ludanChats.png";
+import hsatco from "../assets/images/projects/hsatco.png";
 import { Footer } from "../components";
 
 const Container = styled.div`
@@ -103,53 +104,59 @@ const ProjectStyled = styled.div`
 
 const projects = [
   {
-    id: 0,
     src: keralaTours,
     name: "Kerala Tours - Tourist Landing Page",
     date: "2023 November",
+    desc: "React front-end website showcasing Kerala's tourism.",
     demo: "https://kerala-tours-landing-page.vercel.app/",
     source: "https://github.com/kevin-roan/kerala-tours-landing-page",
   },
-
   {
-    id: 0,
     src: restoHub,
-    name: "RestoHub - Restorent FrontEnd Website",
+    name: "RestoHub - Restaurant Frontend Website",
     date: "2023 August",
+    desc: "Front-end for a restaurant, showcasing meals and booking portal",
     demo: "https://kevin-roan.github.io/restohub/",
     source: "https://github.com/kevin-roan/restohub",
   },
   {
-    id: 1,
     src: kevinRoan,
     name: "PortFolio- You are currently looking at it.",
     date: "2023 August",
+    desc: "Personal portfolio website highlighting projects and skills.",
     demo: "https://kevinroan.vercel.app",
     source: "https://github.com/kevin-roan/kevinroan",
   },
   {
-    id: 2,
     src: blogSite,
     name: "My Blog Site - React FrontEnd Website",
     date: "2023 July",
+    desc: "Personal blog built with React on the front-end, and Firebase on backend.",
     demo: "https://kevinroan.github.io/blog-site",
     source: "https://github.com/kevin-roan/blog-site",
   },
   {
-    id: 3,
     src: educationSite,
     name: "EduTech- React FrontEnd Website",
-    date: "2023 Jun",
+    date: "2023 June",
+    desc: "Educational platform designed with React front-end.",
     demo: "https://kevinroan.github.io/education-site",
     source: "https://github.com/kevin-roan/education-site",
   },
   {
-    id: 4,
     src: ludanChats,
     name: "LudanChats - Real time Chat App",
-    date: "2023 Jun",
+    date: "2023 June",
+    desc: "Real-time chat application for seamless communication.",
     demo: "https://kevinroan.github.io/ludanchats/",
     source: "https://ludan-chats.vercel.app",
+  },
+  {
+    src: hsatco,
+    name: "HSATCO- Website for Freelance client",
+    date: "2022 December",
+    desc: "Frontend website for freelance client, showcasing there services and bussiness informations.",
+    demo: "https://hsatco.com/",
   },
 ];
 
@@ -166,6 +173,7 @@ export default function Projects() {
             demo={project.demo}
             source={project.source}
             key={index}
+            desc={project.desc}
           />
         ))}
       </ProjectContainer>
@@ -174,7 +182,7 @@ export default function Projects() {
   );
 }
 
-const Project = ({ title, imageUrl, date, demo, source, key }) => {
+const Project = ({ title, imageUrl, date, demo, source, key, desc }) => {
   return (
     <ProjectStyled key={key}>
       <imagecontainer>
@@ -182,15 +190,11 @@ const Project = ({ title, imageUrl, date, demo, source, key }) => {
       </imagecontainer>
       <heading>{title}</heading>
       <date>{date}</date>
-      <content>
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-        cillum sint consectetur cupidatat.
-      </content>
+      <content>{desc}</content>
       <buttoncontainer>
         <a href={source}>
           <button>GitHub</button>
         </a>
-
         <a href={demo}>
           <button>Demo</button>
         </a>
