@@ -40,7 +40,7 @@ const IconContainer = styled.div`
 function Footer() {
   return (
     <Container>
-      <Copyright>Designed and Developed by Kevin Roan</Copyright>
+      <Copyright>Designed & Developed by Kevin Roan</Copyright>
       <Copyright>Copyright &copy; 2023 Kevin Roan</Copyright>
       <Copyright>
         <IconContainer>

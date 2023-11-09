@@ -153,7 +153,7 @@ const projects = [
     src: hsatco,
     name: "HSATCO- Website for Freelance client",
     date: "2022 December",
-    desc: "Frontend website for freelance client, showcasing there services and bussiness informations.",
+    desc: "Frontend website for freelance client, showcasing there services and business informations.",
     demo: "https://hsatco.com/",
   },
 ];
