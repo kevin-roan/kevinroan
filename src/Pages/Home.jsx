@@ -1,6 +1,6 @@
 import React from "react";
 import { ImageAnimation, TextTyper, NavBar } from "../components/";
-import { Projects, Skills, AboutMe, Socials } from "../Pages/";
+import { Projects, Skills, AboutMe } from "../Pages/";
 
 const DownloadCv = () => {
   const fileUrl = "/kevinroan-cv.pdf";
