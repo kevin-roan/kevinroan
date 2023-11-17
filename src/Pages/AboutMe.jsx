@@ -43,7 +43,7 @@ const ImageContainer = styled.div`
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
   width: 12vmax;
   margin: 10px;
-  padding: 1vmax;
+  padding: 0.4vmax;
   border-radius: 20px;
   @media screen and (max-width: 850px) {
     display: flex;

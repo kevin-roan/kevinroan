@@ -61,8 +61,6 @@ const ProjectStyled = styled.div`
   }
 
   imagecontainer {
-    margin: 10px;
-    padding: 10px;
     border-radius: 10px;
     img {
       border-radius: 10px;
@@ -146,8 +144,8 @@ const projects = [
     name: "LudanChats - Real time Chat App",
     date: "2023 June",
     desc: "Real-time chat application for seamless communication.",
+    source: "https://github.com/kevin-roan/ludanchats",
     demo: "https://kevinroan.github.io/ludanchats/",
-    source: "https://ludan-chats.vercel.app",
   },
   {
     src: hsatco,
