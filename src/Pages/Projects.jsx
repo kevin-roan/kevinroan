@@ -9,6 +9,7 @@ import ludanChats from "../assets/images/projects/ludanChats.png";
 import hsatco from "../assets/images/projects/hsatco.png";
 import { Footer } from "../components";
 
+/// ludan
 const Container = styled.div`
   background-color: #282c34;
 `;
