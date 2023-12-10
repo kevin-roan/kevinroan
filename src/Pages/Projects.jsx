@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import kevinRoan from "../assets/images/projects/kevinroan.png";
 import blogSite from "../assets/images/projects/blog-site.png";
 import restoHub from "../assets/images/projects/restohub.png";
-import educationSite from "../assets/images/projects/education-site.png";
+import educationSite from "../assets/images/projects/edu.png";
 import keralaTours from "../assets/images/projects/keralaTours.png";
 import ludanChats from "../assets/images/projects/ludanChats.png";
 import hsatco from "../assets/images/projects/hsatco.png";
@@ -36,7 +36,8 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectStyled = styled.div`
-  background-color: black;
+  background-color: #dcdfe4;
+  color: black;
   border: 1px solid white;
   border-radius: 10px;
   min-height: 26vmax;
@@ -94,7 +95,7 @@ const ProjectStyled = styled.div`
       font-family: "QuickSand";
       transition: all 0.5s;
       &:hover {
-        background-color: limegreen;
+        background-color: #cddc39;
         color: black;
       }
     }
@@ -130,21 +131,21 @@ const projects = [
     src: blogSite,
     name: "My Blog Site - React FrontEnd Website",
     date: "2023 July",
-    desc: "Personal blog built with React on the front-end, and Firebase on backend.",
-    demo: "https://kevinroan.github.io/blog-site",
-    source: "https://github.com/kevin-roan/blog-site",
+    desc: "Personal blog built with React , Typescript , Chakra UI , and Firebase on backend.",
+    demo: "https://kevinroan-blogs.vercel.app",
+    source: "https://github.com/kevin-roan/kevinroan-blogs.git",
   },
   {
     src: educationSite,
     name: "EduTech- React FrontEnd Website",
     date: "2023 June",
     desc: "Educational platform designed with React front-end.",
-    demo: "https://kevinroan.github.io/education-site",
-    source: "https://github.com/kevin-roan/education-site",
+    demo: "https://education-website-react-murex.vercel.app/",
+    source: "https://github.com/kevin-roan/education-website-react.git",
   },
   {
     src: ludanChats,
-    name: "LudanChats - Real time Chat App",
+    name: "CHatR- Real time Chat App",
     date: "2023 June",
     desc: "Real-time chat application for seamless communication.",
     source: "https://github.com/kevin-roan/ludanchats",
