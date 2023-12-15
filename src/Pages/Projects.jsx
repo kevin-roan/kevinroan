@@ -7,6 +7,7 @@ import educationSite from "../assets/images/projects/edu.png";
 import keralaTours from "../assets/images/projects/keralaTours.png";
 import ludanChats from "../assets/images/projects/ludanChats.png";
 import hsatco from "../assets/images/projects/hsatco.png";
+import softwareFirm from "../assets/images/projects/softwareFirm.png";
 import { Footer } from "../components";
 
 /// ludan
@@ -40,7 +41,7 @@ const ProjectStyled = styled.div`
   color: black;
   border: 1px solid white;
   border-radius: 10px;
-  min-height: 26vmax;
+  min-height: 30vmax;
   width: 20vmax;
   overflow: auto;
   display: flex;
@@ -104,6 +105,14 @@ const ProjectStyled = styled.div`
 
 const projects = [
   {
+    src: softwareFirm,
+    name: "Software Firm Website- Website for Software Company",
+    date: "2023 December",
+    desc: "Next Js website for software developement firm.",
+    demo: "https://software-firm-website-nextjs.vercel.app/",
+    source: "https://github.com/kevin-roan/software-firm-website-nextjs",
+  },
+  {
     src: keralaTours,
     name: "Kerala Tours - Tourist Landing Page",
     date: "2023 November",
@@ -155,7 +164,7 @@ const projects = [
     src: hsatco,
     name: "HSATCO- Website for Freelance client",
     date: "2022 December",
-    desc: "Frontend website for freelance client, showcasing there services and business informations.",
+    desc: "Frontend website for freelance client, showcasing services and business informations.",
     demo: "https://hsatco.com/",
   },
 ];
