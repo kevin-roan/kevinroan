@@ -1,6 +1,6 @@
 import React from "react";
-import { ImageAnimation, TextTyper, NavBar } from "../components/";
-import { Projects, Skills, AboutMe } from "../Pages/";
+import { ImageAnimation, TextTyper, NavBar, Footer } from "../components/";
+import { Projects, Skills, AboutMe, Contact } from "../Pages/";
 
 const DownloadCv = () => {
   const fileUrl = "/kevinroan-cv.pdf";
@@ -22,7 +22,9 @@ const Home = () => {
         <AboutMe downloadCv={DownloadCv} />
       </div>
       <Skills />
+      <Contact />
       <Projects />
+      <Footer />
     </>
   );
 };

@@ -8,9 +8,7 @@ import keralaTours from "../assets/images/projects/keralaTours.png";
 import ludanChats from "../assets/images/projects/ludanChats.png";
 import hsatco from "../assets/images/projects/hsatco.png";
 import softwareFirm from "../assets/images/projects/softwareFirm.png";
-import { Footer } from "../components";
 
-/// ludan
 const Container = styled.div`
   background-color: #282c34;
 `;
@@ -37,11 +35,11 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectStyled = styled.div`
+  min-height: 24vmax;
   background-color: #dcdfe4;
   color: black;
   border: 1px solid white;
   border-radius: 10px;
-  min-height: 30vmax;
   width: 20vmax;
   overflow: auto;
   display: flex;
@@ -106,7 +104,7 @@ const ProjectStyled = styled.div`
 const projects = [
   {
     src: softwareFirm,
-    name: "Software Firm Website- Website for Software Company",
+    name: "Software Firm Website",
     date: "2023 December",
     desc: "Next Js website for software developement firm.",
     demo: "https://software-firm-website-nextjs.vercel.app/",
@@ -122,7 +120,7 @@ const projects = [
   },
   {
     src: restoHub,
-    name: "RestoHub - Restaurant Frontend Website",
+    name: "RestoHub - Restaurant Website",
     date: "2023 August",
     desc: "Front-end for a restaurant, showcasing meals and booking portal",
     demo: "https://kevin-roan.github.io/restohub/",
@@ -130,7 +128,7 @@ const projects = [
   },
   {
     src: kevinRoan,
-    name: "PortFolio- You are currently looking at it.",
+    name: "PortFolio You are currently looking at it.",
     date: "2023 August",
     desc: "Personal portfolio website highlighting projects and skills.",
     demo: "https://kevinroan.vercel.app",
@@ -186,7 +184,6 @@ export default function Projects() {
           />
         ))}
       </ProjectContainer>
-      <Footer />
     </Container>
   );
 }
