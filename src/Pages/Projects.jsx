@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import kevinRoan from "../assets/images/projects/kevinroan.png";
+import adacodeSolutions from "../assets/images/projects/adacodesolutions.png";
 import blogSite from "../assets/images/projects/blog-site.png";
 import restoHub from "../assets/images/projects/restohub.png";
 import educationSite from "../assets/images/projects/edu.png";
@@ -35,7 +36,9 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectStyled = styled.div`
-  min-height: 24vmax;
+  min-height: 25vmax;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   background-color: #dcdfe4;
   color: black;
   border: 1px solid white;
@@ -103,6 +106,14 @@ const ProjectStyled = styled.div`
 
 const projects = [
   {
+    src: adacodeSolutions,
+    name: "Adacode Solutions",
+    date: " 2024-Jan to Present",
+    desc: "Full Stack Website Leveraging firebase Razorpay and Next.js.",
+    demo: "https://adacodesolutions.com",
+    source: "https://github.com/kevin-roan/adacode.git",
+  },
+  {
     src: softwareFirm,
     name: "Software Firm Website",
     date: "2023 December",
@@ -112,7 +123,7 @@ const projects = [
   },
   {
     src: keralaTours,
-    name: "Kerala Tours - Tourist Landing Page",
+    name: "Tourist Landing Page",
     date: "2023 November",
     desc: "React front-end website showcasing Kerala's tourism.",
     demo: "https://kerala-tours-landing-page.vercel.app/",
@@ -128,7 +139,7 @@ const projects = [
   },
   {
     src: kevinRoan,
-    name: "PortFolio You are currently looking at it.",
+    name: "PortFolio",
     date: "2023 August",
     desc: "Personal portfolio website highlighting projects and skills.",
     demo: "https://kevinroan.vercel.app",
@@ -136,7 +147,7 @@ const projects = [
   },
   {
     src: blogSite,
-    name: "My Blog Site - React FrontEnd Website",
+    name: "Blog Site",
     date: "2023 July",
     desc: "Personal blog built with React , Typescript , Chakra UI , and Firebase on backend.",
     demo: "https://kevinroan-blogs.vercel.app",
@@ -160,9 +171,9 @@ const projects = [
   },
   {
     src: hsatco,
-    name: "HSATCO- Website for Freelance client",
+    name: "HSATCO",
     date: "2022 December",
-    desc: "Frontend website for freelance client, showcasing services and business informations.",
+    desc: "Website for freelance client, showcasing services and business info.",
     demo: "https://hsatco.com/",
   },
 ];

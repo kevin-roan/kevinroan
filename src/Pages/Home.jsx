@@ -22,7 +22,6 @@ const Home = () => {
         <AboutMe downloadCv={DownloadCv} />
       </div>
       <Skills />
-      <Contact />
       <Projects />
       <Footer />
     </>
